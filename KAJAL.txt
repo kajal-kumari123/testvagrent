@@ -1,0 +1,30 @@
+import itertools 
+  
+ def Expenses(inp):
+
+    Dic={ 
+    26:"TOI", 
+    20.5:"Hindu", 
+    34:"ET", 
+    10.5:"BM", 
+    18:"HT", 
+    }; 
+    var=[26,20.5,34,10.5,18] 
+    newp=[] 
+    
+    join=list(itertools.combinations(var,)) 
+    for i in join: 
+    if sum(i)<=inp:
+    newp.append(i) 
+    
+    
+    np=[] 
+     for i in range(len(newp)): 
+    var1=newp[i][0] 
+    var2=newp[i][1] 
+    np.append((Dic[var1],Dic[var2]))
+    print(np) 
+  
+  
+ inp=int(input()) 
+Expenses(inp) 
